@@ -1,0 +1,527 @@
+*,*::after,*::before{
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@keyframes moveLinkLeft {
+    from{color:transparent; left: -30px;}
+    to{color: whitesmoke; left: 50px;}
+}
+
+@keyframes moveLinkLeftAlt {
+    from{color:transparent; left: -30px;}
+    to{color: rgb(37, 37, 37); left: 50px;}
+}
+
+@font-face{
+    src: url(./font/PlayfairDisplay-VariableFont_wght.ttf);
+    font-family: Play;
+}
+@font-face{
+    src: url(./font/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+    font-family: PlayItalic;
+}
+
+/* BODY AND NAV HERE ------------------------------------------------------------------------ */
+
+
+
+
+body{
+    background-image: url(./img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 100%;
+    width: 100vw;
+}
+
+#nav-alt{
+    position: fixed;
+    top: -4rem;
+    width: 100vw;
+    background-color: rgb(78, 78, 78);
+    z-index: 1;
+    padding: .8rem;
+    transition: top .4s;
+}
+
+#nav-alt a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.6rem;
+    font-family: Play;
+}
+#nav-alt a:hover{
+    color: turquoise;
+    transition: .3s;
+}
+
+#nav-alt-links{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+}
+nav{
+    position: absolute;
+    font-size: 1.1rem;
+    top: 17%;
+    left: 30px;
+
+}
+
+#nav-all{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link:hover .nav-link-name{
+    animation: moveLinkLeft 500ms ease-out forwards;
+}
+.nav-link a{
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.nav-link-name{
+    position: absolute;
+    color: transparent;
+    left: -30px;
+    top: 0px;
+    font-family: Play
+    ;
+}
+
+.nav-link h2{
+    z-index: 1
+}
+
+/* TO TOP ARROW----------------------------------------------------------------------- */
+
+#to-top{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(63, 69, 70);
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: .5s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0px 3px 12px 2px rgba(0,0,0,0.94);
+}
+#to-top a{
+    color: whitesmoke;
+}
+
+/* TO TOP ARROW----------------------------------------------------------------------- */
+
+/* LANDING STARTS HERE -------------------------------------------------------------- */
+
+#landing{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#landing-text{
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: top;
+    font-family: Play;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 6.2rem;
+}
+#landing-text h3{
+    font-size: 1.9rem;
+}
+#landing-text a{
+
+    text-decoration: none;
+    font-size: 1.6rem;
+    background-color: rgb(59, 192, 179);
+    width: fit-content;
+    color: whitesmoke;
+    margin-top: 10px;
+    padding: 10px 40px;
+    transition: .3s;
+    border-radius: 30px;
+}
+
+#landing-text a:hover{
+    filter: brightness(80%);
+    transition: .3s;
+}
+
+#social-phone{
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+#social-media a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.8rem;
+    margin-right: 8px;
+}
+
+#social-media a:hover{
+    color: turquoise;
+}
+
+#phone{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+/* CABINS STARTS HERE ---------------------------------------------------------------- */
+
+#cabins{
+    width: 100%;
+    max-width: 100%;
+    background-color: whitesmoke;
+    font-family: Play;
+    padding: 2rem;
+}
+#cabins h2{
+    text-align: center;
+    font-size: 3rem;
+}
+hr{
+    width: 50%;
+    margin: 20px auto;
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+#cabins p{
+    width: 85%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.cabins-photos{
+    width: 85%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cabins-photos img{
+    width: 40%;
+    height: 400px;
+    margin: 10px auto;
+}
+
+.cabins-photos2{
+    width: 77%;
+    margin: 10px auto;
+}
+.cabins-photos2 img{
+    width: 100%;
+}
+
+#icons{
+    margin: 4% auto;
+}
+
+#icons h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#icons-line{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-around;
+    margin: 3rem auto;
+}
+.icon-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-circle{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    border: 4px solid rgb(44, 44, 44);
+}
+#circle1{
+    background-image: url(img/icon1.png);
+}
+#circle2{
+    background-image: url(img/icon2.png);
+}
+
+#circle3{
+    background-image: url(img/icon3.png);
+}
+#circle4{
+    background-image: url(img/icon4.png);
+}
+
+h4{
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+#icons p{
+    margin-top: 0px;
+}
+
+/* FURNITURE STARTS HERE --------------------------------------------------------------------------------- */
+
+#furniture{
+    width: 100%;
+    background-color: rgb(153, 197, 158);
+    font-family: Play;
+    padding: 2rem;
+}
+
+#furniture h2{
+    text-align: center;
+    font-size: 3rem;
+}
+#furniture p{
+    text-align: center;
+    width: 85%;
+    margin: 10px auto;
+}
+.short-hr{
+    width: 40%;
+    margin: 20px auto;
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+#furniture h3{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+.set-photos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.set-image{
+    height: 250px;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid rgb(44, 44, 44);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+.set-image:hover{
+    transition: .3s;
+    filter: brightness(.6);
+}
+.set-image:hover .image-button{
+    transition: .3s;
+    opacity: 1;
+}
+
+.image-button{
+    opacity: 0;
+    transition: .3s;
+    padding: 10px 25px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 7px 5px 18px 0px rgba(0,0,0,0.96);
+    background-color:rgb(230, 227, 64);
+    cursor: pointer;
+    font-family: Play;
+}
+
+#set11{
+    background-image: url(img/set11.jpeg);
+}
+#set12{
+    background-image: url(img/set12.jpg);
+}
+#set13{
+    background-image: url(img/set13.jpg);
+}
+#set21{
+    background-image: url(img/set21.jpg);
+}
+#set22{
+    background-image: url(img/set22.jpg);
+}
+#set23{
+    background-image: url(img/set23.jpg);
+}
+#set31{
+    background-image: url(img/set31.jpg);
+}
+#set32{
+    background-image: url(img/set32.jpg);
+}
+#set33{
+    background-image: url(img/set33.jpg);
+}
+
+/* LOCATION STARTS HERE ------------------------------------------------------------------------- */
+
+#location{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 3rem;
+    font-family: Play;
+}
+
+#location{
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+#map{
+    height: 550px;
+    width: 69%;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 10px auto;
+
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+#location p{
+    font-size: 2.4rem;
+}
+
+/* CONTACT STARTS HERE --------------------------------------------------------------------------------- */
+
+.banner{
+    padding: 1rem;
+    width: 100%;
+    background-color:  rgb(70, 70, 70);
+    text-align: center;
+}
+.banner h4{
+    color: whitesmoke;
+    font-family: Play;
+    font-size: 2.1rem;
+}
+
+/* FOOTER STARTS HERE ------------------------------------------------------------------------------------------ */
+
+footer{
+    background-color: rgb(216, 216, 216);
+    font-family: Play;
+    padding: 3% 3% 2% 3%;
+    font-size: 1.2rem;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+li a{
+    text-decoration: none;
+    border: none;
+}
+#footer-top a{
+    text-decoration: none;
+    color: black;
+
+}
+
+#footer-top a:hover{
+    color: turquoise;
+}
+
+#footer-info a{
+    border-bottom: 2px solid black;
+    font-size: 1.6rem;
+}
+
+footer h5{
+    font-size: 2.2rem;
+    font-weight: 600;
+
+}
+
+#footer-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#footer-contact h6{
+    font-size: 1.7rem;
+}
+
+#footer-links h6{
+    font-size: 1.9rem;
+}
+
+#social-media-footer{
+    margin-top: 10px;
+}
+
+#social-media-footer i{
+    font-size: 2.1rem;
+    margin-right: 5px;
+}
+
+#footer-bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.6rem;
+}
+#footer-bot h6{
+    font-size: .8rem;
+    color: rgb(114, 112, 112);
+    width: 100%;
+    text-align: center;
+    width: fit-content;
+}
+
+
